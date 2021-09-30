@@ -1,22 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
+import Exibir from './components/Exibir/Exibir';
 function App() {
+  const dados = [
+    {
+      id: "1",
+      nome: "Francisco",
+      idade: "14"
+    },
+    {
+      id: "2",
+      nome: "Antonio",
+      idade: "24"
+    },
+    {
+      id: "3",
+      nome: "Augusto",
+      idade: "34"
+    },
+    {
+      id: "4",
+      nome: "Roberto",
+      idade: "44"
+    }
+  ]
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Mensagem</p>
+        <Exibir dados={dados}></Exibir>
       </header>
     </div>
   );
