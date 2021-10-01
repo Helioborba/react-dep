@@ -1,0 +1,5 @@
+Ideia base : app web para marcar memorias da vida, principalmente games?
+protótipo : uma área central com espaço de fundo (fundo 20%, principal 80%), área principal vai conter no lado esquerdo o menu e na direita a página de conteudo sendo vista (menu 30%, conteudo 70%).
+
+
+

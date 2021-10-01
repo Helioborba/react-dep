@@ -7,29 +7,19 @@ function App() {
       id: "1",
       nome: "Francisco",
       idade: "14"
-    },
-    {
-      id: "2",
-      nome: "Antonio",
-      idade: "24"
-    },
-    {
-      id: "3",
-      nome: "Augusto",
-      idade: "34"
-    },
-    {
-      id: "4",
-      nome: "Roberto",
-      idade: "44"
     }
   ]
-
   return (
     <div className="App">
       <header className="App-header">
-        <p>Mensagem</p>
-        <Exibir dados={dados}></Exibir>
+        <div className="App-background">
+          <div className="App-menu">
+            <p>hello</p>
+          </div>
+          <div className="App-content">
+            <Exibir dados={dados}></Exibir>
+          </div>
+        </div>
       </header>
     </div>
   );

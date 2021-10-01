@@ -4,7 +4,7 @@ import ExibirItem from "./ExibirItems";
 function Exibir(props) {
 
     return(
-        <div>
+        <div className="Exibir">
             {props.dados.map((dado) =>  (
                 <ExibirItem
                     key={dado.id}
