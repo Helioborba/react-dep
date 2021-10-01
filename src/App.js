@@ -81,23 +81,6 @@ function App() {
               <button onClick={(event) => conteudoAtualHandler1("10")(event)}>
                 <p>Melhores dos anos 80's</p>
               </button>
-              <button onClick={(event) => conteudoAtualHandler1("10")(event)}>
-                <p>Melhores dos anos 80's</p>
-              </button>
-              <button onClick={(event) => conteudoAtualHandler1("10")(event)}>
-                <p>Melhores dos anos 80's</p>
-              </button>
-              <button onClick={(event) => conteudoAtualHandler1("10")(event)}>
-                <p>Melhores dos anos 80's</p>
-              </button>
-              <button onClick={(event) => conteudoAtualHandler1("10")(event)}>
-                <p>Melhores dos anos 80's</p>
-              </button>
-              <button onClick={(event) => conteudoAtualHandler1("10")(event)}>
-                <p>Melhores dos anos 80's</p>
-              </button>
-             
-              
           </div>
           <div className="App-content">
             <header className="App-content__header">
