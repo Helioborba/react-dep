@@ -8,8 +8,8 @@ function Exibir(props) {
             {props.dados.map((dado) =>  (
                 <ExibirItem
                     key={dado.id}
-                    nome={dado.nome}
-                    idade={dado.idade}
+                    titulo={dado.titulo}
+                    conteudo={dado.conteudo}
                 />
             ))}
         </div>

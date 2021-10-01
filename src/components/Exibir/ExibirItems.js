@@ -1,12 +1,12 @@
 import React from "react";
-import "./Exibir.css"
+import "./ExibirItems.css"
 
 function ExibirItem(props) {
     
     return(
         <div>
             <div>
-                <p>{props.nome} {props.idade}</p>
+                <p>{props.titulo} {props.conteudo}</p>
             </div>
         </div>
     );

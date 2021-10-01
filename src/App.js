@@ -5,22 +5,41 @@ function App() {
   const dados = [
     {
       id: "1",
-      nome: "Francisco",
-      idade: "14"
+      titulo: "GTA San Andreas:",
+      conteudo: "Um jogo clássico de PS2 feito pela Rockstar games"
+    },
+    {
+      id: "2",
+      titulo: "Terraria:",
+      conteudo: "Um jogo sandblox desenvolvido pela Relogic"
     }
   ]
   return (
     <div className="App">
-      <header className="App-header">
+      <main className="App-main">
         <div className="App-background">
           <div className="App-menu">
-            <p>hello</p>
+            <div>
+              <p>Menu</p>
+            </div>
+            <div>
+              <p>Melhores dos 90's</p>
+            </div>
+            <div>
+              <p>Só o filé de 2010</p>
+            </div>
+            <div>
+              <p>Aquelas que a gente não esqueçe</p>
+            </div>
           </div>
           <div className="App-content">
+            <header className="App-content__header">
+              <h1>Conteudo</h1>
+            </header>
             <Exibir dados={dados}></Exibir>
           </div>
         </div>
-      </header>
+      </main>
     </div>
   );
 }
