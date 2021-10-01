@@ -3,8 +3,8 @@ import React,{useState} from 'react';
 function Form() {
     const [titulo,atualizarTitulo] = useState("nada ainda...");
 
-    function onClickFire(action) {
-        atualizarTitulo(action);
+    function onClickFire(event) {
+        atualizarTitulo(event);
     }
     
     return(

@@ -11,14 +11,14 @@
   justify-content: flex-start;
   font-size: calc(6px + 2vmin);
   color: white;
-  
 }
 
 /* separa as div principais, o menu e a area de conteudo */
+
 .App-background {
   display: flex;
   padding: 0.1rem;
-  margin: 2rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
   width: 80rem;
   max-width: 95%;
   border-radius: 12px;
@@ -28,21 +28,58 @@
   min-height: 90vh;
 }
 
+/* MENU */
+
 .App-menu {
   width: 30%;
   background-color: #22272f;
   border: solid 2px #1f1f1f;
   border-radius: 10px 2px 2px 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-menu div {
-  padding: 10px 0px 10px 0px;
+.App-menu button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+	color: inherit;
+	border: none;
+  padding: 5px 0px 5px 0px;
   border-bottom: 0.1px solid #5b6c8d;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  text-align: center;
+  margin: 0px;
+}
+
+.App-menu button:first-child:hover {
+  border-radius: 10px 2px 2px 2px;
+  background-color: #00ffff;
+}
+
+.App-menu button:not(:first-child):hover {
+  border-radius: 2px 2px 2px 2px;
+  background-color: #00ffff;
+}
+
+@media (max-width: 640px) {
+  .App-menu button:last-child   {
+    border: none;
+  }
+  
+  .App-menu button:last-child:hover  {
+    border-radius: 2px 2px 2px 10px;
+  }
 }
 
 .App-menu p {
   margin: 0;
 }
+
+/* CONTENT */
 
 .App-content {
   width: 70%;
