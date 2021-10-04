@@ -40,13 +40,15 @@ function App() {
       case '10':
         setConteudoAtual1(myData.set10);
         break;
+      case 'EDIT':
+        setConteudoAtual1(myData.EDIT);
+        // Aqui vai virar outro usestate no futuro quando existir a edição
+        break;
       default:
         setConteudoAtual1("");
         break;
     }
   }
-  
-
   return (
     <Wrapper>
       <div className="App">
@@ -57,31 +59,16 @@ function App() {
                   <p>Menu</p>
                 </button>
                 <button onClick={(event) => conteudoAtualHandler1("2")(event)}>
-                  <p>Melhores dos 90's</p>
+                  <p>Jogos antigos</p>
                 </button>
                 <button onClick={(event) => conteudoAtualHandler1("3")(event)}>
-                  <p>Só o filé de 2010</p>
+                  <p>PS2 e outros</p>
                 </button>
                 <button onClick={(event) => conteudoAtualHandler1("4")(event)}>
-                  <p>Aquelas que a gente não esqueçe</p>
+                  <p>SNES e outros</p>
                 </button>
-                <button onClick={(event) => conteudoAtualHandler1("5")(event)}>
-                  <p>Apenas modão</p>
-                </button>
-                <button onClick={(event) => conteudoAtualHandler1("6")(event)}>
-                  <p>Para festejar</p>
-                </button>
-                <button onClick={(event) => conteudoAtualHandler1("7")(event)}>
-                  <p>Hit's do verão</p>
-                </button>
-                <button onClick={(event) => conteudoAtualHandler1("8")(event)}>
-                  <p>Músicas do velho oeste</p>
-                </button>
-                <button onClick={(event) => conteudoAtualHandler1("9")(event)}>
-                  <p>Novas do Centro-oeste</p>
-                </button>
-                <button onClick={(event) => conteudoAtualHandler1("10")(event)}>
-                  <p>Melhores dos anos 80's</p>
+                <button onClick={(event) => conteudoAtualHandler1("EDIT")(event)}>
+                  <p>Editor</p>
                 </button>
             </div>
             <div className="App-content">

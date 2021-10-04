@@ -1,28 +1,28 @@
 { 
     "set1": [{
         "id": "1",
-        "titulo": "Nada:",
-        "conteudo": "Nada inserido ainda..."
+        "titulo": "Bem-vindo!",
+        "conteudo": "Para iniciar suas memórias, crie uma entrada ou edite uma previamente criada com o menu acima"
     }],
     "set2": [{
         "id": "1",
-        "titulo": "Metallica:",
-        "conteudo": "Músicas heavy metal"
+        "titulo": "Final Fantasy:",
+        "conteudo": "Uma grande franquia de jogos."
     },
     {
         "id": "2",
-        "titulo": "Matuê:",
-        "conteudo": "Cantor de trap da Era moderna"
+        "titulo": "Grand Theft Auto:",
+        "conteudo": "Criado pela rockstar games, GTA é uma franquia extremamente popular."
     }],
     "set3": [{
         "id": "1",
-        "titulo": "Casey Edwards:",
-        "conteudo": "Apenas hit's"
+        "titulo": "Transformers(2004):",
+        "conteudo": "Jogo criado pela Atari; diferente de muitos outros games da época."
     }],
     "set4": [{
         "id": "1",
-        "titulo": "Nada:",
-        "conteudo": "Nada inserido ainda..."
+        "titulo": "Civilization:",
+        "conteudo": "Um clássico jogo de estratégia."
     }],
     "set5": [{
         "id": "1",
@@ -53,5 +53,10 @@
         "id": "1",
         "titulo": "Nada:",
         "conteudo": "Nada inserido ainda..."
+    }],
+    "EDIT": [{
+        "id": "1",
+        "titulo": "Bem-vindo ao editor! selecione as opções ao lado para iniciar a edição",
+        "conteudo": ""
     }]
 }
