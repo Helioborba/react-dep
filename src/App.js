@@ -1,7 +1,8 @@
 import './App.css';
 import React,{useState} from 'react';
-import Exibir from './components/Exibir/Exibir';
+import Conteudo from './components/Conteudo/Conteudo';
 import Wrapper from './components/helpers/Wrapper';
+import Menu from './components/Menu/Menu';
 import myData from './data.json';
 function App() {
   
@@ -54,29 +55,8 @@ function App() {
       <div className="App">
         <main className="App-main">
           <div className="App-background">
-            <div className="App-menu">
-                <button onClick={(event) => conteudoAtualHandler1("1")(event)}>
-                  <p>Menu</p>
-                </button>
-                <button onClick={(event) => conteudoAtualHandler1("2")(event)}>
-                  <p>Jogos antigos</p>
-                </button>
-                <button onClick={(event) => conteudoAtualHandler1("3")(event)}>
-                  <p>PS2 e outros</p>
-                </button>
-                <button onClick={(event) => conteudoAtualHandler1("4")(event)}>
-                  <p>SNES e outros</p>
-                </button>
-                <button onClick={(event) => conteudoAtualHandler1("EDIT")(event)}>
-                  <p>Editor</p>
-                </button>
-            </div>
-            <div className="App-content">
-              <header className="App-content__header">
-                <h1>Conteudo</h1>
-              </header>
-              <Exibir dados={conteudoAtual1}></Exibir>
-            </div>
+            <Menu conteudoHandler={conteudoAtualHandler1}></Menu>
+            <Conteudo dados={conteudoAtual1}></Conteudo>
           </div>
         </main>
       </div>

@@ -1,0 +1,70 @@
+.Menu {
+    width: 30%;
+    background-color: #22272f;
+    border: solid 2px #1f1f1f;
+    border-radius: 6px 6px 6px 6px;
+    display: flex;
+    flex-direction: column;
+}
+  
+.Menu button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 5px 0px 5px 0px;
+    border-bottom: 0.1px solid #5b6c8d;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    text-align: center;
+    margin: 0px;
+}
+
+/* First child é sempre o menu */
+.Menu button:first-child {
+    background-color: #0d9d00;
+    margin-bottom: 2px;
+    border-radius: 5px 5px 2px 2px;
+}
+
+.Menu button:first-child:hover {
+    border-radius: 5px 5px 2px 2px;
+    background-color: #009999;
+}
+
+
+.Menu button:not(:first-child):hover {
+    border-radius: 2px 2px 2px 2px;
+    background-color: #009999;
+}
+/* ///////////////////////////////////////// */
+
+/* o segundo child é apenas uma estilizacao boba para centralizar, é possivel fazer isso com o flexbox também */
+.Menu button:nth-child(2) {
+    margin-top: auto;
+}
+/* Colocar um espaco entre o penultimo com o editor */
+.Menu button:nth-last-child(2) {
+    margin-bottom: 2px;
+    border-bottom: none;
+}  
+
+/* Aqui vai ser sempre o editor */
+.Menu button:last-child {
+    margin-top: auto;
+    background-color: #15ff00;
+    border-radius: 2px 2px 5px 5px;
+    border-top: 0.1px solid #5b6c8d;
+}
+
+.Menu button:last-child:hover  {
+    border-radius: 2px 2px 5px 5px;
+}
+/* ///////////////////////////// */
+
+.Menu p {
+    margin: 0;
+}
