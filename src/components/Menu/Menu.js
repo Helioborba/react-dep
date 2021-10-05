@@ -16,7 +16,7 @@ const Menu = (props) => {
             <button onClick={(event) => props.conteudoHandler("4")(event)}>
                 <p>SNES e outros</p>
             </button>
-            <button onClick={(event) => props.conteudoHandler("EDIT")(event)}>
+            <button onClick={props.editorHandler}>
                 <p>Editor</p>
             </button>
         </Card>

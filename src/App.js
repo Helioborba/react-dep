@@ -4,10 +4,18 @@ import Conteudo from './components/Conteudo/Conteudo';
 import Wrapper from './components/helpers/Wrapper';
 import Menu from './components/Menu/Menu';
 import myData from './data.json';
+import Form from './components/Form/Form'
 function App() {
   
   const [conteudoAtual1, setConteudoAtual1] = useState(myData.set1);
+  const [editorMode, setEditorMode] = useState(false);
 
+  const editorHandler = event => {
+    event.preventDefault();
+    setEditorMode(() => {
+      return (<Form></Form>)
+    })
+  }
   const conteudoAtualHandler1 = value => event => {
     event.preventDefault();
     switch (value) {
@@ -55,8 +63,8 @@ function App() {
       <div className="App">
         <main className="App-main">
           <div className="App-background">
-            <Menu conteudoHandler={conteudoAtualHandler1}></Menu>
-            <Conteudo dados={conteudoAtual1}></Conteudo>
+            <Menu editorHandler={editorHandler} conteudoHandler={conteudoAtualHandler1}></Menu>
+            <Conteudo editor={editorMode} dados={conteudoAtual1}></Conteudo>
           </div>
         </main>
       </div>

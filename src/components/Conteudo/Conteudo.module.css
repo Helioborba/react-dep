@@ -11,3 +11,15 @@
   padding: 10px 0px 1px 0px;
   margin: 0px clamp(10px, 20%, 400px) 0px clamp(10px, 20%, 400px);
 }
+
+.Editor {
+  width: 70%;
+  margin-left: 5px;
+}
+
+.Editor form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
