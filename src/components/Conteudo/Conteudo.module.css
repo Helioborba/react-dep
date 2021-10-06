@@ -4,9 +4,6 @@
 }
   
 .Conteudo header h1 {
-  /* display: inherit;
-  box-sizing: border-box;
-  width: 60vh; */
   border-bottom: solid 1px #1f1f1f;
   padding: 10px 0px 1px 0px;
   margin: 0px clamp(10px, 20%, 400px) 0px clamp(10px, 20%, 400px);
@@ -44,13 +41,8 @@
   min-width: 5vw;
   min-height: 5vw;
 }
-/* @media (min-width: 600px) {
-  .Editor label {
-    font-size: 2.3vw;
-  }
-} */
 
- @media (min-width: 2700px) {
+ @media (min-width: 1300px) {
   .Editor form {
     margin: 0 10px 0 0;
   }
