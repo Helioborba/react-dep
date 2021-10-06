@@ -9,6 +9,7 @@ function App() {
   
   const [conteudoAtual1, setConteudoAtual1] = useState(myData.set1);
   const [editorMode, setEditorMode] = useState(false);
+  
 
   const editorHandler = event => {
     event.preventDefault();

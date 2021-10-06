@@ -1,11 +1,11 @@
 import React,{useState} from 'react';
 
-function Form() {
+const Form = (props) => {
     const [titulo,atualizarTitulo] = useState("nada ainda...");
     const [mensagem,atualizarMensagem] = useState("");
 
 
-    function onClickFire(event) {
+    const onClickFire = (event) => {
         event.preventDefault();
         atualizarTitulo(mensagem);
     }
@@ -16,9 +16,8 @@ function Form() {
     return(
         <form onSubmit={onClickFire} value="algo">
             <label>Olá, digite uma mensagem abaixo:</label>
-            <input type='text' onChange={mensagemHandler}/>
+            <textarea spellcheck="false" type='text' onChange={mensagemHandler}></textarea>
             <button type="submit">Enviar</button>
-            <h2>Última mensagem: {titulo}</h2>
         </form>
     );
 }
