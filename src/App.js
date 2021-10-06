@@ -7,18 +7,25 @@ import myData from './data.json';
 import Form from './components/Form/Form'
 function App() {
   
-  const [conteudoAtual1, setConteudoAtual1] = useState(myData.set1);
-  const [editorMode, setEditorMode] = useState(false);
+  const [conteudoAtual1, setConteudoAtual1] = useState(myData.set1); //  !apenas um mock! > Hook provisorio experando integracao com api
+  const [editorMode, setEditorMode] = useState(false); // Hook provisorio enquanto nao a um metodo mais eficiente
   
 
   const editorHandler = event => {
     event.preventDefault();
+    // Tem que melhorar essa lógica abaixo ; o render do form não devia ser uma variável pra checagem também (checar form para melhor explicacao)
     setEditorMode(() => {
-      return (<Form></Form>)
+      if (editorMode === false) {
+        return (<Form setConteudoAtual={setConteudoAtual1} setEditorMode={setEditorMode}></Form>)
+      } else {
+        return false
+      }
     })
   }
   const conteudoAtualHandler1 = value => event => {
     event.preventDefault();
+    setEditorMode(false); // Serve para checar se o modo de edição está ativo
+    // Esse switch case absurdo e temporario enquanto nao ha integracao com api
     switch (value) {
       case '1':
         setConteudoAtual1(myData.set1);
