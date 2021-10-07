@@ -26,6 +26,7 @@ function App() {
     event.preventDefault();
     setEditorMode(false); // Serve para checar se o modo de edição está ativo
     // Esse switch case absurdo e temporario enquanto nao ha integracao com api
+    // os dados estao sendo puxados de uma file json ja para melhor compreensao do futuro
     switch (value) {
       case '1':
         setConteudoAtual1(myData.set1);
@@ -56,10 +57,6 @@ function App() {
         break;
       case '10':
         setConteudoAtual1(myData.set10);
-        break;
-      case 'EDIT':
-        setConteudoAtual1(myData.EDIT);
-        // Aqui vai virar outro usestate no futuro quando existir a edição
         break;
       default:
         setConteudoAtual1("");

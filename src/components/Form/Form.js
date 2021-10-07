@@ -6,7 +6,10 @@ const Form = (props) => {
 
 
     const onClickFire = (event) => {
-        event.preventDefault();
+        event.preventDefault(); // ESSA LINHA SEMPRE TEM QUE SER A PRIMEIRA, SENAO NADA VAI RODAR E A PAGINA RECARREGA
+        if (mensagem.trim().length === 0) {
+            return;
+        }
         // Improviso enquanto os dados não sao mandados via api
         const prep = [{
             key: 1,
@@ -28,9 +31,9 @@ const Form = (props) => {
     const mensagemHandler = (event) => {
         atualizarMensagem(event.target.value);
     }
-    
+
     return(
-        <form onSubmit={onClickFire} value="algo">
+        <form onSubmit={onClickFire}>
             <label>Olá, digite uma mensagem abaixo:</label>
             <textarea spellCheck="false" type='text' onChange={mensagemHandler}></textarea>
             <button type="submit">Enviar</button>
