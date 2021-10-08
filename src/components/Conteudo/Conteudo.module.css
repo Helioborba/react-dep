@@ -36,22 +36,6 @@
   font-size: 3vw
 }
 
-.Editor button {
-  color: #ffffff;
-  font-size: 100%;
-  min-width: 5vw;
-  min-height: 5vw;
-  /* new */
-	background: #15ff00;
-	border-radius: 1px;
-	transition: all 0.4s ease 0s;
-}
-
-.Editor button:hover {
-  background: #434343;
-	transition: all 0.4s ease 0s;
-}
-
  @media (min-width: 1300px) {
   .Editor form {
     margin: 0 10px 0 0;
@@ -70,7 +54,6 @@
     justify-content: center;
   }
 
-  
   .Editor textarea {
     margin: 10px 0 6px 0;
     width: 100%;
@@ -79,16 +62,6 @@
   .Editor label {
     font-size: 3vw;
   }
-  .Editor button {
-    min-width: min(10%, 20px);
-    min-height: min(10%, 20px);
-    border: none;
-  }
 } 
 
 
-@media (max-width: 700px) {
-  .Editor button {
-    border: none;
-  }
-} 

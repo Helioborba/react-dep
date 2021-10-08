@@ -6,7 +6,7 @@ const Conteudo = (props) => {
     if (props.editor !== false) {
         return (
             <Card className={conteudo.Editor}>{props.editor}</Card>
-        )
+        );
     } else {
         return(
             <Card className={conteudo.Conteudo}>
@@ -15,7 +15,7 @@ const Conteudo = (props) => {
                 </header>
                 <Exibir dados={props.dados}></Exibir>
             </Card>
-        )
+        );
     }
 }
 

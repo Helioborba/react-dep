@@ -1,0 +1,30 @@
+.Estilo button {
+    color: #ffffff;
+    font-size: 100%;
+    min-width: 5vw;
+    min-height: 5vw;
+    /* new */
+    background: #15ff00;
+    border-radius: 1px;
+    transition: all 0.4s ease 0s;
+  }
+  
+  .Estilo button:hover {
+    background: #434343;
+    transition: all 0.4s ease 0s;
+}
+
+
+@media (max-width: 300px) {
+    .Estilo button {
+      min-width: min(10%, 20px);
+      min-height: min(10%, 20px);
+      border: none;
+    }
+} 
+
+@media (max-width: 700px) {
+    .Estilo button {
+      border: none;
+    }
+} 
