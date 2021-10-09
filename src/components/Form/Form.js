@@ -7,13 +7,13 @@ const Form = (props) => {
     const [mensagem,setMensagem] = useState("");
     const [error,setLogError] = useState("");
 
-    const onClickFire = (event) => {
+    const formSubmitHandler = (event) => {
         event.preventDefault(); // ESSA LINHA SEMPRE TEM QUE SER A PRIMEIRA, SENAO NADA VAI RODAR E A PAGINA RECARREGA
         if (mensagem.trim().length === 0) {
             setLogError(
                 { 
-                  titulo: "Invalid Input",
-                  mensagem: "No text was written!" 
+                  titulo: "Dados Inválidos",
+                  mensagem: "Nada foi digitado! Por favor insira o texto novamente." 
                 }
             )
             return;
@@ -42,10 +42,13 @@ const Form = (props) => {
         setMensagem(event.target.value);
     }
 
+    const errorHandler = (event) => {
+        setLogError(false);
+    }
     return(
         <Wrapper>
-            {error && <ErrorModal></ErrorModal>}
-            <form onSubmit={onClickFire}>
+            {error && <ErrorModal dados={error} onClick={errorHandler}></ErrorModal>}
+            <form onSubmit={formSubmitHandler}>
                 <label>Olá, digite uma mensagem abaixo:</label>
                 <textarea spellCheck="false" type='text' onChange={mensagemHandler}></textarea>
                 <Button type="submit">Enviar</Button>

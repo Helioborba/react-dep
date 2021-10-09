@@ -1,20 +1,26 @@
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import estilos from "./ErrorModal.module.css"
-const ErrorModel = (props) => {
+import Wrapper from "../helpers/Wrapper";
+const ErrorModal = (props) => {
     return(
-        <Card className={estilos.modal}>
-            <header>
-                <h2>{props.title}</h2>
-            </header>
-            <div>
-                <p>{props.message}</p>
-            </div>
-            <footer>
-                <Button></Button>
-            </footer>
-        </Card>
+        // A primeira div é o backgrop, precisa de onclick também para ser escondida depois.
+        <Wrapper>
+                
+            <div className={estilos.backdrop} onClick={props.onClick}/>
+            <Card className={estilos.modal}>
+                <header className={estilos.header}>
+                    <h2>{props.dados.titulo}</h2>
+                </header>
+                <div className={estilos.conteudo}>
+                    <p>{props.dados.mensagem}</p>
+                </div>
+                <footer className={estilos.eventos}>
+                    <Button onClick={props.onClick}>Entendi</Button>
+                </footer>
+            </Card>
+        </Wrapper>
     )
 }
 
-export default ErrorModel;
+export default ErrorModal;

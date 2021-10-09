@@ -1,45 +1,63 @@
 .backdrop {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100vh;
-z-index: 10;
-background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
 }
 
 .modal {
-position: fixed;
-top: 30vh;
-left: 10%;
-width: 80%;
-z-index: 100;
-overflow: hidden;
+    position: fixed;
+    top: 20vh;
+    left: 10%;
+    width: 80%;
+    z-index: 100;
+    overflow: hidden;
+    background-color: white;
 }
   
 .header {
-background: #4f005f;
-padding: 1rem;
+    background: #22272f;
+    padding: 1rem;
 }
   
 .header h2 {
-margin: 0;
-color: white;
+    margin: 0;
+    color: white;
 }
   
-.content {
-padding: 1rem;
+.conteudo {
+    padding: 1rem;
+    color: #22272f;
 }
   
-.actions {
-padding: 1rem;
-display: flex;
-justify-content: flex-end;
+.eventos {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
 }
   
 @media (min-width: 768px) {
     .modal {
         left: calc(50% - 20rem);
         width: 40rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .modal {
+        top: 20vh;
+        font-size: calc(2px + 2vmin);
+    }
+    .conteudo {
+        padding: 5px 5px 5px 5px;
+    }
+    .header {
+        padding: 3px 3px 3px 3px;
+    }
+    .eventos {
+        padding: 0.8rem;
     }
 }
