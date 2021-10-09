@@ -6,7 +6,6 @@ const ErrorModal = (props) => {
     return(
         // A primeira div é o backgrop, precisa de onclick também para ser escondida depois.
         <Wrapper>
-                
             <div className={estilos.backdrop} onClick={props.onClick}/>
             <Card className={estilos.modal}>
                 <header className={estilos.header}>

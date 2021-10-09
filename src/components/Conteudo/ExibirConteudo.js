@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../UI/Card";
-import exibir from "./Exibir.module.css"
+import exibir from "./ExibirConteudo.module.css"
 import ExibirItem from "./ExibirItems";
 const Exibir = (props) => {
 

@@ -1,8 +1,10 @@
 import React,{useState} from 'react';
 import ErrorModal from '../Errors/ErrorModal';
-import Wrapper from '../helpers/Wrapper'
+import Card from '../UI/Card'
 import Button from '../UI/Button';
-const Form = (props) => {
+import estilo from './FormEditor.module.css'
+const FormEditor = (props) => {
+
     const [titulo,atualizarTitulo] = useState("nada ainda...");
     const [mensagem,setMensagem] = useState("");
     const [error,setLogError] = useState("");
@@ -45,16 +47,17 @@ const Form = (props) => {
     const errorHandler = (event) => {
         setLogError(false);
     }
+    
     return(
-        <Wrapper>
+        <Card className={estilo.Editor}>
             {error && <ErrorModal dados={error} onClick={errorHandler}></ErrorModal>}
             <form onSubmit={formSubmitHandler}>
                 <label>Olá, digite uma mensagem abaixo:</label>
                 <textarea spellCheck="false" type='text' onChange={mensagemHandler}></textarea>
                 <Button type="submit">Enviar</Button>
             </form>
-        </Wrapper>
+        </Card>
     );
 }
 
-export default Form;
+export default FormEditor;

@@ -9,59 +9,6 @@
   margin: 0px clamp(10px, 20%, 400px) 0px clamp(10px, 20%, 400px);
 }
 
-.Editor {
-  width: 70%;
-  margin-left: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.Editor form {
-  display: flex;
-  align-items: baseline;
-  flex-direction: column;
-  justify-content: baseline;
-}
-
-.Editor textarea {
-  margin: 10px 0 6px 0;
-  font-size: 1.5vw; 
-  width: 100%;
-  height: 20vw;
-  resize: none;
-}
-
-.Editor label {
-  font-size: 3vw
-}
-
- @media (min-width: 1300px) {
-  .Editor form {
-    margin: 0 10px 0 0;
-  }
-} 
-
-@media (max-width: 300px) {
-  .Editor {
-    padding-top: 5px;
-  }
-
-  .Editor form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .Editor textarea {
-    margin: 10px 0 6px 0;
-    width: 100%;
-    height: 30vw;
-  }
-  .Editor label {
-    font-size: 3vw;
-  }
-} 
 
 

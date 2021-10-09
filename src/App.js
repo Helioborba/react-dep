@@ -4,7 +4,7 @@ import Conteudo from './components/Conteudo/Conteudo';
 import Wrapper from './components/helpers/Wrapper';
 import Menu from './components/Menu/Menu';
 import myData from './data.json';
-import Form from './components/Form/Form'
+import FormEditor from './components/Form/FormEditor'
 
 function App() {
   
@@ -17,15 +17,15 @@ function App() {
     // Tem que melhorar essa lógica abaixo ; o render do form não devia ser uma variável pra checagem também (checar form para melhor explicacao)
     setEditorMode(() => {
       if (editorMode === false) {
-        return (<Form setConteudoAtual={setConteudoAtual1} setEditorMode={setEditorMode}></Form>)
+        return (<FormEditor setConteudoAtual={setConteudoAtual1} setEditorMode={setEditorMode}></FormEditor>);
       } else {
-        return false
+        return false;
       }
     })
   }
   const conteudoAtualHandler1 = value => event => {
     event.preventDefault();
-    setEditorMode(false); // Serve para checar se o modo de edição está ativo
+    setEditorMode(false); // Serve para checar se o modo de edição está ativo, no caso ele vai retirar o editor sempre que um botao for ativado
     // Esse switch case absurdo e temporario enquanto nao ha integracao com api
     // os dados estao sendo puxados de uma file json ja para melhor compreensao do futuro
     switch (value) {
