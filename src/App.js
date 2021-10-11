@@ -1,7 +1,7 @@
 import './App.css';
-import React,{useState} from 'react';
+import React,{Fragment, useState} from 'react';
+import ReactDOM from 'react';
 import Conteudo from './components/Conteudo/Conteudo';
-import Wrapper from './components/helpers/Wrapper';
 import Menu from './components/Menu/Menu';
 import myData from './data.json';
 import FormEditor from './components/Form/FormEditor'
@@ -65,7 +65,7 @@ function App() {
     }
   }
   return (
-    <Wrapper>
+    <Fragment>
       <div className="App">
         <main className="App-main">
           <div className="App-background">
@@ -74,7 +74,7 @@ function App() {
           </div>
         </main>
       </div>
-    </Wrapper>
+    </Fragment>
   );
 }
 

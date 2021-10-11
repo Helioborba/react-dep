@@ -1,12 +1,12 @@
-import Wrapper from "../helpers/Wrapper";
+import React,{Fragment} from "react";
 
 const Card = (props) => {
     return (
-        <Wrapper>
+        <Fragment>
             <div className={props.className}>
                 {props.children}
             </div>
-        </Wrapper>
+        </Fragment>
     )
 }
 
