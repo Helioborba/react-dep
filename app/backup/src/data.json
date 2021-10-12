@@ -1,0 +1,62 @@
+{ 
+    "set1": [{
+        "id": "1",
+        "titulo": "Bem-vindo!",
+        "conteudo": "Para iniciar suas memórias, crie uma entrada ou edite uma previamente criada com o menu acima"
+    }],
+    "set2": [{
+        "id": "1",
+        "titulo": "Final Fantasy:",
+        "conteudo": "Uma grande franquia de jogos."
+    },
+    {
+        "id": "2",
+        "titulo": "Grand Theft Auto:",
+        "conteudo": "Criado pela rockstar games, GTA é uma franquia extremamente popular."
+    }],
+    "set3": [{
+        "id": "1",
+        "titulo": "Transformers(2004):",
+        "conteudo": "Jogo criado pela Atari; diferente de muitos outros games da época."
+    }],
+    "set4": [{
+        "id": "1",
+        "titulo": "Civilization:",
+        "conteudo": "Um clássico jogo de estratégia."
+    }],
+    "set5": [{
+        "id": "1",
+        "titulo": "Nada:",
+        "conteudo": "Nada inserido ainda..."
+    }],
+    "set6": [{
+        "id": "1",
+        "titulo": "Nada:",
+        "conteudo": "Nada inserido ainda..."
+    }],
+    "set7": [{
+        "id": "1",
+        "titulo": "Nada:",
+        "conteudo": "Nada inserido ainda..."
+    }],
+    "set8": [{
+        "id": "1",
+        "titulo": "Nada:",
+        "conteudo": "Nada inserido ainda..."
+    }],
+    "set9": [{
+        "id": "1",
+        "titulo": "Nada:",
+        "conteudo": "Nada inserido ainda..."
+    }],
+    "set10": [{
+        "id": "1",
+        "titulo": "Nada:",
+        "conteudo": "Nada inserido ainda..."
+    }],
+    "EDIT": [{
+        "id": "1",
+        "titulo": "Bem-vindo ao editor! selecione as opções ao lado para iniciar a edição",
+        "conteudo": ""
+    }]
+}
