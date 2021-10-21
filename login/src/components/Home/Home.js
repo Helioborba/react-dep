@@ -10,6 +10,7 @@ const Home = (props) => {
   const appLinkHandler = (event) => {
     console.log(event);
   }
+  
   return (
     <Card className={classes.home}>
       <h1>Welcome back! it's been too long, we've missed you</h1>
