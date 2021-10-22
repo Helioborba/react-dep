@@ -13,8 +13,9 @@ const Home = (props) => {
   
   return (
     <Card className={classes.home}>
-      <h1>Welcome back! it's been too long, we've missed you</h1>
-      <Button type="submit" className={classes.btn} onClick={appLinkHandler}>Go to app</Button>
+      <h1>Bem-vindo de volta! Faz tanto tempo, sentimos sua falta.</h1>
+      {/* Aqui devera ser redirecionado para o app Memorias */}
+      <Button type="submit" className={classes.btn} onClick={appLinkHandler}>{'>Para o APP<'}</Button>
     </Card>
   );
 };

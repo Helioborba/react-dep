@@ -1,8 +1,9 @@
-import React, { useEffect, useState, useReducer } from 'react';
+import React, { useEffect, useState, useReducer, useContext } from 'react';
 
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
+import AuthContext from '../../store/auth-context';
 
 const  emailReducer = (state,action) => {
   if (action.type === 'USER_EMAIL_INPUT') {
@@ -30,6 +31,7 @@ const Login = (props) => {
   // const [enteredPassword, setEnteredPassword] = useState('');
   // const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
+  const AuthCtx = useContext(AuthContext);
 
   const [emailState, emailDispatch] = useReducer(emailReducer, {
     value:"",
@@ -40,12 +42,13 @@ const Login = (props) => {
     value:"",
     isValid:null
   });
+
   // destructuring do valor unico necessario (isValid) e criando um alias para ele. (basicamente, eles vao servir de ponteiro) 
   // com esse metodo, vai tornar menor o custo de performance, no caso nao sera refeito evaluacoes desnecessarias.
   const {isValid:emailStateValidate} = emailState
   const {isValid:passStateValidate} = passState
 
-  // Usado para abaixar o numero de codigo e realizar a atualizacao de dados sendo inceridos mutualmente no form (email/pass)
+  // Usado para abaixar o numero de codigo e realizar a atualizacao de dados sendo inseridos mutualmente no form (email/pass)
   useEffect(() => {
     const identifier = setTimeout(() => {
       setFormIsValid(
@@ -82,7 +85,7 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onLogin(emailState.value, passState.value);
+    AuthCtx.onLogin(emailState.value, passState.value);
   };
 
   return (
