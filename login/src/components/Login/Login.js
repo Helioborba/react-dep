@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useReducer, useContext } from 'react';
+import React, { useEffect, useState, useReducer, useContext, useRef } from 'react';
 
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
@@ -33,7 +33,8 @@ const Login = (props) => {
   // const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
   const AuthCtx = useContext(AuthContext);
-
+  const emailRef = useRef();
+  const passRef = useRef();
   const [emailState, emailDispatch] = useReducer(emailReducer, {
     value:"",
     isValid:null
@@ -86,13 +87,21 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    AuthCtx.onLogin(emailState.value, passState.value);
+    // Caso nenhum seja valido, vamos colocar foco no input que nao esta certo.
+    if (formIsValid) {
+      AuthCtx.onLogin(emailState.value, passState.value);
+    } else if (!emailStateValidate) {
+      emailRef.current.focus();
+    } else {
+      passRef.current.focus();
+    }
   };
 
   return (
     <Card className={classes.login}>
       <form onSubmit={submitHandler}>
         <Input 
+          ref={emailRef}
           isValid={emailStateValidate} 
           label='Email'
           htmlFor="email" 
@@ -102,6 +111,7 @@ const Login = (props) => {
           onChange={emailChangeHandler}
           onBlur={validateEmailHandler}/>
         <Input 
+          ref={passRef}
           isValid={passStateValidate} 
           label='Password'
           htmlFor="password" 
@@ -111,7 +121,7 @@ const Login = (props) => {
           onChange={passChangeHandler}
           onBlur={validatePassHandler}/>
         <div className={classes.actions}>
-          <Button type="submit" className={classes.btn} disabled={!formIsValid}>
+          <Button type="submit" className={classes.btn}>
             Login
           </Button>
         </div>
