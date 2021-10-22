@@ -9,6 +9,7 @@ const Home = (props) => {
 
   const appLinkHandler = (event) => {
     console.log(event);
+    appLinkState('')
   }
   
   return (
@@ -16,6 +17,7 @@ const Home = (props) => {
       <h1>Bem-vindo de volta! Faz tanto tempo, sentimos sua falta.</h1>
       {/* Aqui devera ser redirecionado para o app Memorias */}
       <Button type="submit" className={classes.btn} onClick={appLinkHandler}>{'>Para o APP<'}</Button>
+      <p>{appLink}</p>
     </Card>
   );
 };
